@@ -53,8 +53,8 @@ Github repo: https://github.com/BenDrysdale/Proofpoint-URL-Decoder
 
     
     [array]$regEx = ""
-    $itterations="c","d","m","r","s"
-    foreach ($i in $itterations){
+    $iterations="c","d","m","r","s"
+    foreach ($i in $iterations){
     [array]$regEx +="((\&$i\=\w+\-\w+\-\w+\-\w+\-\w+)|(\&$i\=\w+\-\w+\-\w+\-\w+)|(\&$i\=\w+\-\w+\-\w+)|(\&$i\=\w+\-\w+)|(\&$i\=\w+\-\w+)|(\&$i\=\w+))|"
     }
     $compReg=("((https\:\/\/urldefense\.proofpoint\.com\/v2\/url\?u\=)|$regex(\&e\=))") -replace " ",""
