@@ -68,5 +68,8 @@ Github repo: https://github.com/BenDrysdale/Proofpoint-URL-Decoder
     $g = $f -replace ("-26","&")
     $h = $g -replace ("-40","@")
     $i = $h -replace ("[.]",".")
+    $j = $i -replace ("(\w+\:\//)|(www.)")
+    $k = $j -replace ('(.+?)/.+','$1')
     "Decoded URL: $i"
+    "Hint: You may want to block this ($k)."
 }
